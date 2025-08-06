@@ -1,29 +1,51 @@
-This linux (ubuntu) machine is used to segement images from a planktoScope for submission to EcoTaxa.
+# ====================================================================
+# === install system prerequisites
+# ====================================================================
+# via package manager
+sudo apt install git
 
-To do this:
+# === docker's special install process
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 
-0. Planktoscope must be on and connected (via wifi)
-1. Open a terminal on the desktop (ctrl+alt+t)
-2. Type `./copyPlanktoScopeImages.sh` and press enter
-  * this will prompt for the PlanktoScope password. 
-    * NOTE: nothing will show while typing the password.
-  * NOTE: use "tab completion" to make this easier
-  * NOTE: To interrupt a running command press (ctrl+c)
-4. Wait for the files to transfer from the PlanktoScope to the desktop
-5. Open the Segmenter GUI at `http://localhost:1880/ui`
-  * "Update acquisition's folder list" & select image folders
-  * Click "start segmentation"
-8. Once finished, `.zip` files will be `~/.local/share/planktoscope/data`
-9. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
-   * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4) 
-10. cleanup files on desktop & planktoscope
-   * cleanup on desktop by running `~/cleanupPlanktoScopeFiles.sh`
-   * planktoscope files should be managed through the GUI
+# install
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-
-
-## Other Notes
-### Re-Segmenting
-NOTE: test on 2025-08-06 showed force rework does not force re-segmenting as docs indicate it should.
-To detect already-segmented images, the segmenter checks for a file in the img directory called `done.txt`.
-To force re-segmenting delete `done.txt` in the relevant img directory.
+# ====================================================================
+# ====================================================================
+# === install forklift
+# ====================================================================
+# !!! MANUALLY download
+# set up install dir
+mkdir /opt/forklift
+# install
+tar -xzf forklift_0.8.0_linux_amd64.tar.gz -C /opt/forklift
+# set up symlink for easy usage
+sudo ln -s /opt/forklift/forklift /usr/local/bin/forklift
+# ====================================================================
+# ====================================================================
+# === set up docker usage without sudo
+# ====================================================================
+sudo usermod -aG docker imars  # NOTE: replace `imars` with your username
+# !!! MANUALLY log out & log back in
+# ====================================================================
+# ====================================================================
+# === initial set up of segmenter using forklift
+# ====================================================================
+sudo -E forklift pallet switch --apply github.com/PlanktoScope/pallet-segmenter@edge
+# ====================================================================
+# ====================================================================
+# === set segmenter to run automatically on login
+# ====================================================================
+echo "forklift stage apply" > ~/.profile
+# ====================================================================
