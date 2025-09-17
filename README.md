@@ -18,7 +18,7 @@ To do this:
    * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4) 
 8. cleanup files on desktop & planktoscope
    * cleanup on desktop by running `~/cleanupPlanktoScopeFiles.sh`
-   * planktoscope files should be managed through the GUI
+   * planktoscope files should be managed through the planktoscope GUI
 
 
 
