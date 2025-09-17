@@ -15,9 +15,10 @@ To do this:
   * Click "start segmentation"
 6. Once finished, `.zip` files will be `~/.local/share/planktoscope/data`
 7. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
-   * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4) 
-8. cleanup files on desktop & planktoscope
-   * cleanup on desktop by running `~/cleanupPlanktoScopeFiles.sh`
+   * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4)
+8. Upload the raw images to box.com for backup
+9. cleanup files on desktop & planktoscope
+   * Delete all files from the desktop by running `~/cleanupPlanktoScopeFiles.sh`.
    * planktoscope files should be managed through the planktoscope GUI
 
 
