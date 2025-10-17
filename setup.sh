@@ -28,9 +28,9 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 # !!! MANUALLY download from
 # https://github.com/PlanktoScope/forklift/releases
 # set up install dir
-mkdir /opt/forklift
+sudo mkdir /opt/forklift
 # install
-tar -xzf forklift_0.8.0_linux_amd64.tar.gz -C /opt/forklift
+sudo tar -xzf forklift_0.8.0_linux_amd64.tar.gz -C /opt/forklift
 # set up symlink for easy usage
 sudo ln -s /opt/forklift/forklift /usr/local/bin/forklift
 # ====================================================================
