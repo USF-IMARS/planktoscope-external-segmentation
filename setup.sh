@@ -54,5 +54,7 @@ echo "forklift stage apply" > ~/.profile
 # === install scripts from this repo
 # ====================================================================
 git clone git@github.com:USF-IMARS/planktoscope-external-segmentation.git
-mv planktoscope-external-segmentation/*sh .
+cp planktoscope-external-segmentation/copyPlanktoScopeImages.sh .
+cp planktoscope-external-segmentation/cleanupPlanktoscopeFiles.sh .
+chmod +x copyPlanktoScopeImages.sh cleanupPlanktoscopeFiles.sh
 # ====================================================================
