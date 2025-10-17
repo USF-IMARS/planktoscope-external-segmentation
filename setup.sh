@@ -50,3 +50,9 @@ sudo -E forklift pallet switch --apply github.com/PlanktoScope/pallet-segmenter@
 # ====================================================================
 echo "forklift stage apply" > ~/.profile
 # ====================================================================
+# ====================================================================
+# === install scripts from this repo
+# ====================================================================
+git clone git@github.com:USF-IMARS/planktoscope-external-segmentation.git
+mv planktoscope-external-segmentation/*sh .
+# ====================================================================
