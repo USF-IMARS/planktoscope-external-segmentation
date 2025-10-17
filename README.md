@@ -5,19 +5,20 @@ To do this:
 1. Planktoscope must be on and connected (via wifi)
 2. Open a terminal on the desktop (ctrl+alt+t)
 3. Type `./copyPlanktoScopeImages.sh` and press enter
+    * if asked "are you sure" type `yes` & enter
     * this will prompt for the PlanktoScope password. 
       * NOTE: nothing will show while typing the password.
       * NOTE: use "tab completion" to make this easier
       * NOTE: To interrupt a running command press (ctrl+c)
-4. Wait for the files to transfer from the PlanktoScope to the desktop
-5. Open the Segmenter GUI at `http://localhost:1880/ui`
+5. Wait for the files to transfer from the PlanktoScope to the desktop
+6. Open the Segmenter GUI at `http://localhost:1880/ui`
     * "Update acquisition's folder list" & select image folders
     * Click "start segmentation"
-6. Once finished, `.zip` files will be `~/.local/share/planktoscope/data`
-7. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
+7. Once finished, `.zip` files will be `~/.local/share/planktoscope/data`
+8. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
      * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4)
-8. Upload the raw images to box.com for backup
-9. cleanup files on desktop & planktoscope
+9. Upload the raw images to box.com for backup
+10. cleanup files on desktop & planktoscope
      * Delete all files from the desktop by running `~/cleanupPlanktoScopeFiles.sh`.
      * planktoscope files should be managed through the planktoscope GUI
 
