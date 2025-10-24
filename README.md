@@ -23,7 +23,8 @@ To do this:
 12. Upload the raw images to box.com for backup
 13. cleanup files on desktop & planktoscope
      * Delete all files from the desktop by running `~/cleanupPlanktoScopeFiles.sh`.
-     * planktoscope files should be managed through the planktoscope GUI
+     * planktoscope files should be managed through the planktoscope GUI "gallery"
+14. Use the planktoscope GUI to shutdown (button on "home" screen). After waiting press power button on planktoscope.
 
 
 
