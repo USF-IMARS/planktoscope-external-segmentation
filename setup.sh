@@ -64,7 +64,7 @@ sudo apt install -y filezilla
 git clone https://github.com/USF-IMARS/planktoscope-external-segmentation
 # === set up executable desktop icons
 # exported EcoTaxa folder
-ln -s ~/.local/share/planktoscope/data/export/ planktoscope_ecotaxa_exports
+ln -s ~/.local/share/planktoscope/data/export/ ~/Desktop/planktoscope_ecotaxa_exports
 # image importing script
 chmod +x ~/planktoscope-external-segmentation/copyPlanktoScopeImages.sh 
 ln -s ~/planktoscope-external-segmentation/copyPlanktoScopeImages.desktop ~/Desktop/copyPlanktoScopeImages.desktop
