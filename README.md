@@ -19,7 +19,7 @@ To do this:
 9. Once finished, `.zip` files will be `~/.local/share/planktoscope/data/export`
      * this is a hidden directory (press `ctrl+h` in the file browser to reveal hidden files.
 11. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
-     * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4)
+     * see [the PlanktoScope protocol]([https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4?version_warning=no&step=15))
 12. Upload the raw images to box.com for backup
 13. cleanup files on desktop & planktoscope
      * Delete all files from the desktop by running `~/cleanupPlanktoScopeFiles.sh`.
