@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=cleanupPlanktoscopeFiles
+Comment=Cleanup PlanktoScope images on this machine
+Exec=gnome-terminal -- bash -i -c '/home/imars/planktoscope-external-segmentation/cleanupPlanktoScopeFiles.sh; exec bash'
+Icon=utilities-terminal
+Terminal=false
+Type=Application
