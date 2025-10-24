@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=copyPlanktoscopeImages
+Comment=Copy images to this machine
+Exec=gnome-terminal -- bash -i -c '/home/imars/planktoscope-external-segmentation/copyPlanktoScopeImages.sh; exec bash'
+Icon=utilities-terminal
+Terminal=false
+Type=Application
