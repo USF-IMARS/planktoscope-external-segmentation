@@ -61,7 +61,7 @@ sudo apt install -y filezilla
 # ====================================================================
 # === install scripts from this repo
 # ====================================================================
-git clone git@github.com:USF-IMARS/planktoscope-external-segmentation.git
+git clone https://github.com/USF-IMARS/planktoscope-external-segmentation
 # === set up executable desktop icons
 # exported EcoTaxa folder
 ln -s ~/.local/share/planktoscope/data/export/ planktoscope_ecotaxa_exports
