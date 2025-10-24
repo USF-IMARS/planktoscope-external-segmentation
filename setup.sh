@@ -1,3 +1,6 @@
+# NOTE: This script cannot be run fully autonomously.
+#       Some steps below are marked "!!! MANUAL".
+#       These must be completed by a human.
 # ====================================================================
 # === install system prerequisites
 # ====================================================================
@@ -51,6 +54,11 @@ sudo -E forklift pallet switch --apply github.com/PlanktoScope/pallet-segmenter@
 echo "forklift stage apply" > ~/.profile
 # ====================================================================
 # ====================================================================
+# === install filezilla
+# ====================================================================
+sudo apt install -y filezilla
+# ====================================================================
+# ====================================================================
 # === install scripts from this repo
 # ====================================================================
 git clone git@github.com:USF-IMARS/planktoscope-external-segmentation.git
@@ -68,14 +76,19 @@ gio set ~/Desktop/cleanupPlanktoScopeFiles.desktop metadata::trusted true
 # link to README
 ln -s ~/planktoscope-external-segmentation/openReadme.desktop ~/Desktop/openReadme.desktop
 gio set ~/Desktop/openReadme.desktop metadata::trusted true
-
+# Filezilla link
+chmod +x ~/planktoscope-external-segmentation/filezilla.desktop
+ln -s ~/planktoscope-external-segmentation/filezilla.desktop ~/Desktop/filezilla.desktop
+gio set ~/Desktop/filezilla.desktop metadata::trusted true
 # ====================================================================
 # ====================================================================
 # === create shortcuts in firfox
 # ====================================================================
+# !!! MANUAL
 # shortcuts include
 # README file  https://github.com/USF-IMARS/planktoscope-external-segmentation/tree/main
 # segmenter    http://localhost:1880/ui/
 # planktoscope http://home.pkscope/ps/node-red-v2/ui
 # ====================================================================
+
 
