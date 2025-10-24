@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=README
+Comment=Open Planktoscope Segmentation README on GitHub
+Exec=xdg-open https://github.com/USF-IMARS/planktoscope-external-segmentation/blob/main/README.md
+Icon=web-browser
+Terminal=false
+Categories=Network;WebBrowser;
