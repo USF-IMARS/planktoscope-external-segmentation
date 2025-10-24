@@ -54,7 +54,28 @@ echo "forklift stage apply" > ~/.profile
 # === install scripts from this repo
 # ====================================================================
 git clone git@github.com:USF-IMARS/planktoscope-external-segmentation.git
-cp planktoscope-external-segmentation/copyPlanktoScopeImages.sh .
-cp planktoscope-external-segmentation/cleanupPlanktoscopeFiles.sh .
-chmod +x copyPlanktoScopeImages.sh cleanupPlanktoscopeFiles.sh
+# === set up executable desktop icons
+# exported EcoTaxa folder
+ln -s ~/.local/share/planktoscope/data/export/ planktoscope_ecotaxa_exports
+# image importing script
+chmod +x ~/planktoscope-external-segmentation/copyPlanktoScopeImages.sh 
+ln -s ~/planktoscope-external-segmentation/copyPlanktoScopeImages.desktop ~/Desktop/copyPlanktoScopeImages.desktop
+gio set ~/Desktop/copyPlanktoScopeImages.desktop metadata::trusted true
+# file cleanup script
+chmod +x ~/planktoscope-external-segmentation/cleanupPlanktoscopeFiles.sh
+ln -s ~/planktoscope-external-segmentation/cleanupPlanktoScopeFiles.desktop ~/Desktop/cleanupPlanktoScopeFiles.desktop
+gio set ~/Desktop/cleanupPlanktoScopeFiles.desktop metadata::trusted true
+# link to README
+ln -s ~/planktoscope-external-segmentation/openReadme.desktop ~/Desktop/openReadme.desktop
+gio set ~/Desktop/openReadme.desktop metadata::trusted true
+
 # ====================================================================
+# ====================================================================
+# === create shortcuts in firfox
+# ====================================================================
+# shortcuts include
+# README file  https://github.com/USF-IMARS/planktoscope-external-segmentation/tree/main
+# segmenter    http://localhost:1880/ui/
+# planktoscope http://home.pkscope/ps/node-red-v2/ui
+# ====================================================================
+
