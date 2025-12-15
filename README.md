@@ -8,15 +8,17 @@ To do this:
     * if asked "are you sure" type `yes` & enter
     * this will prompt for the PlanktoScope password. 
       * NOTE: nothing will show while typing the password.
-6. Wait for the files to transfer from the PlanktoScope to the desktop
-7. Open the Segmenter GUI at `http://localhost:1880/ui`
+6. Wait for the files to transfer from the PlanktoScope to the desktop.
+8. Open the Segmenter GUI at `http://localhost:1880/ui`
     * there should be bookmark in firefox 
     * "Update acquisition's folder list" & select image folders
+        * Directory processing is recursive; you only need to select the top-most folder.
     * Click "start segmentation". 
-9. Once finished, `.zip` files will be `~/.local/share/planktoscope/data/export`
-     * this is a hidden directory; you may need to press `ctrl+h` in the file browser to reveal hidden files.
+9. Once finished, `.zip` files will be `/home/imars/.local/share/planktoscope/data/export`
+     * there should be a symlink to this location on the desktop
 11. Upload files to EcoTaxa using FTP (filezilla) & use the EcoTaxa website to complete.
-     * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4?version_warning=no&step=15)
+     * see [the PlanktoScope protocol](https://www.protocols.io/view/planktoscope-protocol-for-plankton-imaging-bp2l6bq3zgqe/v4?version_warning=no&step=15) under "upload images to EcoTaxa".
+     * In filezilla, paste the filepath `/home/imars/.local/share/planktoscope/data/export`
 12. Upload the raw images to box.com for backup
 13. Cleanup files on desktop & planktoscope
      * Delete all files from the desktop by running the `cleanupPlanktoScopeFiles` script on the desktop.
