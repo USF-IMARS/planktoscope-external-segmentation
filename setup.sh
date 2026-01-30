@@ -5,7 +5,7 @@
 # === install system prerequisites
 # ====================================================================
 # via package manager
-sudo apt install v-y git
+sudo apt install -y git
 
 # === docker's special install process
 # Add Docker's official GPG key:
