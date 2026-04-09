@@ -49,6 +49,11 @@ sudo usermod -aG docker imars  # NOTE: replace `imars` with your username
 sudo -E forklift pallet switch --apply github.com/PlanktoScope/pallet-segmenter@edge
 # ====================================================================
 # ====================================================================
+# === ensure permissions are correct (workaround for [#2](https://github.com/USF-IMARS/planktoscope-external-segmentation/issues/2)
+# ====================================================================
+sudo chown -R $USER:$USER ~/.local/share/forklift/
+# ====================================================================
+# ====================================================================
 # === set segmenter to run automatically on login
 # ====================================================================
 echo "forklift stage apply" >> ~/.profile
