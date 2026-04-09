@@ -51,7 +51,7 @@ sudo -E forklift pallet switch --apply github.com/PlanktoScope/pallet-segmenter@
 # ====================================================================
 # === set segmenter to run automatically on login
 # ====================================================================
-echo "forklift stage apply" > ~/.profile
+echo "forklift stage apply" >> ~/.profile
 # ====================================================================
 # ====================================================================
 # === install filezilla
